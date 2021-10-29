@@ -71,5 +71,69 @@
     ```
 - Count valid word more efficiently using  INNER JOIN. Thus, only the words with a valid translation will the counted.
     ```
-        SELECT count(*) FROM words INNER JOIN translations"ON translations.word_id = words.id
+        SELECT count(*) FROM words INNER JOIN translations ON translations.word_id = words.id
     ```
+
+## PHP
+1. Difference between "extends" and "implement"
+    In OOP, we use extends on a class to inherit attributes and methods from a parent class. The attributes and methodes can be overwritten in th child class.
+
+    In the otherhand, "implements" is used to implement and interface and define its methods in the child class. SSo the methods defined in the interface are empty.  
+    Exemple: 
+    ``` 
+    Extends
+        class User {
+            private $name;
+
+            public function set_name($name){
+                $this->name=$name
+            }
+
+            public function get_name(){
+                return $this->name
+            }
+        }
+
+        class Admin extends User{
+            // $name is available here
+            // set_name is available here
+            // get_name is available here
+            // we can add another method or attribute
+            private $level
+
+            public function set_level($level){
+                $this->level = $level
+            }
+
+            public function get_level(){
+                return $this->level
+            }
+
+        }
+
+        $user = new User();
+        $user->set_name('Amadou');
+        $user->get_name(); // returns: 'Amadou'
+        $user->set_level(1); // Throw Fatal Error:  Call to undefined function set_level
+
+        $admin = new Admin();
+        $admin->set_name('Boss');
+        $admin->get_name(); // returns 'Boss'
+        $admin->set_level(10);
+        $admin->get_level(); //returns '10'
+
+    Implements
+        interfacte Help{
+            public function sayHelp();
+            
+        }
+
+        class Admin implements User{
+            public function sayHelp(){
+                echo 'Help';
+            }
+        }
+
+    ```
+
+2. 
