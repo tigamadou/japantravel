@@ -136,4 +136,4 @@
 
     ```
 
-2. 
+2. [Sum of all multiples of 3 or 5](multiples.php)
