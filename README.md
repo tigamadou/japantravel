@@ -67,9 +67,9 @@
 ## Database
 - List the definitions of a given word
     ```
-        `SELECT * FROM definitions WHERE word_id = 1`
+        SELECT * FROM definitions WHERE word_id = 1
     ```
-- Count valid word more efficiently using INNER JOIN. Thus, only the words with a valid translation will the counted.
+- Count valid word more efficiently using  INNER JOIN. Thus, only the words with a valid translation will the counted.
     ```
-        `SELECT count(*) FROM words INNER JOIN translations"ON translations.word_id = words.id`
+        SELECT count(*) FROM words INNER JOIN translations"ON translations.word_id = words.id
     ```
