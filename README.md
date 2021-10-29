@@ -52,5 +52,14 @@
             end
         ```
         The complexity is O(n)
-5. A closuse Use exemple
-    
+5. A closure Use exemple
+    ```
+        function gainXP(x) {
+            return function(y) {
+                return x + y;
+            };
+        }
+
+        const xpA = gainXP(5)
+        const xpB = gainXP(10)
+    ```
