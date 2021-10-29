@@ -31,4 +31,26 @@
     - Listen to the drop event, determine when files are dropped and trigger the files uploading using Ajax with a FormData
     - After the drop, create a preview using FileReader Api, reading the file date form the drop event,
     - Listen to the upload events and show progress of each file
-    - 
+4. Sequential Integers Sum with Ruby
+    - Recursive way [file](sum.rb)
+        ```
+            def sum_recursive(numbers)
+                return 0  if numbers.empty?
+                number = numbers.pop
+                return number + sum_recursive(numbers)
+            end
+
+        ```
+    - Iterative way [file](sum.rb)
+        ```
+            def sum_iterative(numbers)
+                res = 0
+                numbers.each do |i|
+                    res += i
+                end
+                res
+            end
+        ```
+        The complexity is O(n)
+5. A closuse Use exemple
+    
